@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&family=League+Gothic&display=swap');
+/* 
+font-family: 'Hubballi', cursive;
+font-family: 'League Gothic', sans-serif;
+ */
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    background-color: rgb(115, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 40vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    min-height: 45vh;
+    background-color: cornsilk;
+    border-radius: 50px;
+}
+h3 {
+    padding: 20px;
+    font-family: 'Hubballi', cursive;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Repurposed button style from Sunny Sips Website */
+button {
+    border: gray solid;
+    border-bottom: 3px gray solid;
+    border-left: 3px gray solid;
+    border-radius: 7px;
+    background-color: #F2FABE;
+    padding: 5px;
+    font-size: 32px;
+}
+button:active {
+    border-right: 1px rgb(63, 63, 63) solid;
+    border-top: 1px rgb(63, 63, 63) solid;
+    border-left: 1px rgb(63, 63, 63) solid;
+    border-bottom: 1px rgb(63, 63, 63) solid;
+    background-color: #e0e7b0;
+}
+
+textarea {
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    resize: none;
+    font-family: 'Hubballi', cursive;
+    font-size: large;
+}
+
+h1 {
+    font-family: 'League Gothic', sans-serif;
+    letter-spacing: 1px;
+    font-size: 50px;
+}
+
+h2 {
+    margin-top: 20px;
+    letter-spacing: 1px;
+    font-family: 'Hubballi', cursive;
+    font-size: 30px;
+}
+i {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 30px;
+    margin: 4px;
+}
+i:hover {
+    font-size: 34px;
+    padding: 10px;
+}

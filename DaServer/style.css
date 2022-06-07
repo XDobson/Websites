@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+/* Font Families
+font-family: 'Josefin Sans', sans-serif; (Bold, thick, heading)
+
+*/
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    animation: loop 20s infinite;
+}
+
+@keyframes loop {
+    0% {
+        background: rgba(207, 0, 0, 1);
+    }
+
+    11% {
+        background: rgba(207, 102, 0, 1);
+    }
+
+    22% {
+        background: rgba(204, 207, 0, 1);
+    }
+
+    33% {
+        background: rgba(13, 207, 0, 1);
+    }
+
+    44% {
+        background: rgba(0, 204, 207, 1);
+    }
+
+    55% {
+        background: rgba(0, 16, 207, 1);
+    }
+
+    66% {
+        background: rgba(113, 0, 207, 1);
+    }
+
+    77% {
+        background: rgba(207, 0, 204, 1);
+    }
+
+    88% {
+        background: rgba(207, 0, 128, 1);
+    }
+
+    100% {
+        background: rgba(207, 0, 0, 1);
+    }
+}
+
+#bodyCover {
+    background: linear-gradient(144deg, #000000FF 0%, #000000FF 30%, #00000000 100%);
+    width: 100%;
+    height: 100%;
+}
+
+#navbar {
+    position: fixed;
+    visibility: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 10vh;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    transition: background 1s;
+    animation: loop 015s infinite reverse;
+}
+
+#navbutt {
+    visibility: inherit;
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 125%;
+    border-radius: 30%;
+    transition-property: background, border-radius;
+    transition-duration: 0.75s;
+    background-color: rgb(255, 244, 143);
+    width: 6vw;
+    min-width: 56px;
+    height: 5vh;
+}
+
+#navbutt:hover {
+    visibility: inherit;
+    border-radius: 5%;
+    background-color: rgb(149, 243, 137);
+}
+
+
+.fa-bars {
+    z-index: 1;
+    visibility: visible;
+    color: white;
+    font-size: xx-large;
+}
+
+#outsideMenu {
+    position: fixed;
+    left: 1%;
+    top: 2%;
+    visibility: hidden;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+}
+
+#rowOne {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 5%;
+}
+
+/* Title */
+h1 {
+    padding-top: 11vh;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 10vh;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#twitterListDiv {
+    width: 45%;
+    margin: 0;
+}
+
+#rightItem {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#rightColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 45%;
+}
+
+
+@media (max-width:800px) {
+    #rowOne {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #twitterListDiv {
+        width: 90%;
+    }
+
+    #rightColumn {
+        margin-top: 2vh;
+        width: 90%;
+    }
+}
+
+@media (max-width:538px) {
+    h1 {
+        padding-top: 12vh;
+    }
+
+    #navbar {
+        height: 11vh;
+    }
+
+    .firstThree {
+        margin: 0 10vw;
+    }
+
+    #outsideMenu {
+        visibility: visible;
+    }
+
+    #insideMenu {
+        visibility: hidden;
+        position: absolute;
+    }
+}
+
+@media (max-width:420px) {
+    .firstThree {
+        margin: 0 9vw;
+    }
+}
+
+@media (max-width: 366px) {
+    .firstThree {
+        margin: 0;
+    }
+
+    .home {
+        margin: 0 35vw;
+    }
+}
+
+@media (max-width: 336px) {
+    #navbutt {
+        min-width: 51px;
+    }
+}
+
+@media (min-width: 1500px) {
+    #navbutt {
+        width: 8vw;
+        height: 6vh;
+        font-size: 4vh;
+    }
+}

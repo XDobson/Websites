@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clear Cups With Custom Vinyl Stickers">
+
+    <!-- Tab Icon -->
+    <link rel="shortcut icon" type="image" href="sunnySipsFavicon.png"/>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dancing+Script:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">    
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ce3885d5b9.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Webpage Title -->
+    <title>Commission</title>
+</head>
+
+
+<body>
+    <!-- Nav bar at the top of the view port -->
+    <div id="navbar">
+        <img id="logo" src="Images/sunnySips.png" alt="Logo">
+        <div id="break"></div>
+        <a href="index.html" ><h1 class="navbutt">Home</h1></a>
+        <a id="navcbtn" href="form.html" ><h1 class="navbutt">Commission</h1></a>
+        <a href="shop.html" ><h1 class="navbutt">Shop</h1></a>
+        <a href="https://linktr.ee/SunnySips"><button id="links" class="navbutt" >Links</button></a>        
+        <!-- Small window that has links -->
+        <!-- <div id="linkpage">
+            <a href="" ><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:sunshinecastillo1213@gmail.com" ><i class="fa-solid fa-at"></i></a>
+            <a href="sms:815-900-4724" ><i class="fa-solid fa-phone"></i></a>
+        </div> -->
+    </div>
+
+    <!-- Needed to push form down from inside of the navbar -->
+    <div id="spacer"></div>
+
+    <div id="formcontent">
+    <h1>Contact us via email by completing the form below!</h1>
+    <h2>Or, click "Links" at the top of the page for more options.</h2>
+    <br>
+    <br>
+    <h2>Cups start at $15, Milk Bottles are $20, with any shipping prices To Be Determined</h2>
+    <h1> We accept CashApp and Zelle</h3>
+    <h1 id="cashicons"><span class="iconify" data-icon="simple-icons:cashapp"></span>     <span class="iconify" data-icon="simple-icons:zelle"></span>
+    </h1>
+    </div>
+
+    <div id="form">
+        <form action="https://formsubmit.co/sunshinecastillo1213@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="Sunny Sips Website Form">
+            <input type="hidden" name="_next" value="https://sunny-sips.vercel.app/thankyou.html">
+            <textarea type="text" name="message" placeholder="Your Message" required></textarea>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <img id="formlogo" src="Images/sunnySipsLogo.png" alt="">
+</body>
+</html>

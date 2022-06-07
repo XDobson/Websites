@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Control, Conquer, Delete!">
+    <link rel="stylesheet" href="style.css">
+    <title>Ctrl Conquer Delete</title>
+</head>
+
+<body>
+    <section id="startingScreen">
+        <h1><span id="one">Ctrl</span> + <span id="two">Conquer</span> + <span id="three">Delete</span></h1>
+        <h6>The goal of the game is to capture the Enemy's castle.</h6>
+        <h6>Your castle gains 2 gold every turn.</h6>
+        <br>
+        <h6>You can use your gold to buy:</h6>
+        <h6>One square, allowing you to expand. (2g) </h6>
+        <h6>(Enemy tiles cost 8g) </h6>
+        <br>
+        <h6>Farms, which make 3 gold every turn. (15g) </h6>
+        <h6>Archers, who protect adjacent tiles. (xg) </h6>
+        <h6>Soldiers, who attack enemy towers. (xg) </h6>
+        <br>
+        <h6>Mines are tiles that make more money per turn, but cannot be built and must be captured</h6>
+        <br>
+        <br>
+        <button onclick='beginGame()' id="startButton">Begin Conquest</button>
+    </section>
+    <section id="winScreen">
+        <h1><span id="one">Ctrl</span> + <span id="two">Conquer</span> + <span id="three">Delete</span></h1>
+        <h6>you wiiiinnnn woooooooooo good job very cool very good woooo</h6>
+    </section>
+
+    <content id="playingField">
+
+        <div onclick='playerClaim("1-1")' id="1-1"><img id="1-1img" src=""></div>
+        <div onclick='playerClaim("1-2")' id="1-2"><img id="1-2img" src=""></div>
+        <div onclick='playerClaim("1-3")' id="1-3"><img id="1-3img" src=""></div>
+        <div onclick='playerClaim("1-4")' id="1-4"><img id="1-4img" src=""></div>
+        <div onclick='playerClaim("1-5")' id="1-5"><img id="1-5img" src=""></div>
+        <div onclick='playerClaim("1-6")' id="1-6"><img id="1-6img" src=""></div>
+        <div onclick='playerClaim("1-7")' id="1-7"><img id="1-7img" src=""></div>
+        <div onclick='playerClaim("1-8")' id="1-8"><img id="1-8img" src=""></div>
+        <div onclick='playerClaim("1-9")' id="1-9"><img id="1-9img" src=""></div>
+        <div onclick='playerClaim("1-10")' id="1-10"><img id="1-10img" src=""></div>
+        <div onclick='playerClaim("1-11")' id="1-11"><img id="1-11img" src=""></div>
+        <div onclick='playerClaim("1-12")' id="1-12"><img id="1-12img" src=""></div>
+        <div onclick='playerClaim("1-13")' id="1-13"><img id="1-13img" src=""></div>
+        <div onclick='playerClaim("1-14")' id="1-14"><img id="1-14img" src=""></div>
+        <div onclick='playerClaim("1-15")' id="1-15"><img id="1-15img" src=""></div>
+        <div onclick='playerClaim("1-16")' id="1-16"><img id="1-16img" src=""></div>
+        <div onclick='playerClaim("1-17")' id="1-17"><img id="1-17img" src=""></div>
+        <div onclick='playerClaim("1-18")' id="1-18"><img id="1-18img" src=""></div>
+        <div onclick='playerClaim("1-19")' id="1-19"><img id="1-19img" src=""></div>
+        <div onclick='playerClaim("1-20")' id="1-20"><img id="1-20img" src=""></div>
+        
+        <div onclick='playerClaim("2-1")' id="2-1"><img id="2-1img" src=""></div>
+        <div onclick='playerClaim("2-2")' id="2-2"><img id="2-2img" src=""></div>
+        <div onclick='playerClaim("2-3")' id="2-3"><img id="2-3img" src=""></div>
+        <div onclick='playerClaim("2-4")' id="2-4"><img id="2-4img" src=""></div>
+        <div onclick='playerClaim("2-5")' id="2-5"><img id="2-5img" src=""></div>
+        <div onclick='playerClaim("2-6")' id="2-6"><img id="2-6img" src=""></div>
+        <div onclick='playerClaim("2-7")' id="2-7"><img id="2-7img" src=""></div>
+        <div onclick='playerClaim("2-8")' id="2-8"><img id="2-8img" src=""></div>
+        <div onclick='playerClaim("2-9")' id="2-9"><img id="2-9img" src=""></div>
+        <div onclick='playerClaim("2-10")' id="2-10"><img id="2-10img" src=""></div>
+        <div onclick='playerClaim("2-11")' id="2-11"><img id="2-11img" src=""></div>
+        <div onclick='playerClaim("2-12")' id="2-12"><img id="2-12img" src=""></div>
+        <div onclick='playerClaim("2-13")' id="2-13"><img id="2-13img" src=""></div>
+        <div onclick='playerClaim("2-14")' id="2-14"><img id="2-14img" src=""></div>
+        <div onclick='playerClaim("2-15")' id="2-15"><img id="2-15img" src=""></div>
+        <div onclick='playerClaim("2-16")' id="2-16"><img id="2-16img" src=""></div>
+        <div onclick='playerClaim("2-17")' id="2-17"><img id="2-17img" src=""></div>
+        <div onclick='playerClaim("2-18")' id="2-18"><img id="2-18img" src=""></div>
+        <div onclick='playerClaim("2-19")' id="2-19"><img id="2-19img" src=""></div>
+        <div onclick='playerClaim("2-20")' id="2-20"><img id="2-20img" src=""></div>
+
+        <div onclick='playerClaim("3-1")' id="3-1"><img id="3-1img" src=""></div>
+        <div onclick='playerClaim("3-2")' id="3-2"><img id="3-2img" src=""></div>
+        <div onclick='playerClaim("3-3")' id="3-3"><img id="3-3img" src=""></div>
+        <div onclick='playerClaim("3-4")' id="3-4"><img id="3-4img" src=""></div>
+        <div onclick='playerClaim("3-5")' id="3-5"><img id="3-5img" src=""></div>
+        <div onclick='playerClaim("3-6")' id="3-6"><img id="3-6img" src=""></div>
+        <div onclick='playerClaim("3-7")' id="3-7"><img id="3-7img" src=""></div>
+        <div onclick='playerClaim("3-8")' id="3-8"><img id="3-8img" src=""></div>
+        <div onclick='playerClaim("3-9")' id="3-9"><img id="3-9img" src=""></div>
+        <div onclick='playerClaim("3-10")' id="3-10"><img id="3-10img" src=""></div>
+        <div onclick='playerClaim("3-11")' id="3-11"><img id="3-11img" src=""></div>
+        <div onclick='playerClaim("3-12")' id="3-12"><img id="3-12img" src=""></div>
+        <div onclick='playerClaim("3-13")' id="3-13"><img id="3-13img" src=""></div>
+        <div onclick='playerClaim("3-14")' id="3-14"><img id="3-14img" src=""></div>
+        <div onclick='playerClaim("3-15")' id="3-15"><img id="3-15img" src=""></div>
+        <div onclick='playerClaim("3-16")' id="3-16"><img id="3-16img" src=""></div>
+        <div onclick='playerClaim("3-17")' id="3-17"><img id="3-17img" src=""></div>
+        <div onclick='playerClaim("3-18")' id="3-18"><img id="3-18img" src=""></div>
+        <div onclick='playerClaim("3-19")' id="3-19"><img id="3-19img" src=""></div>
+        <div onclick='playerClaim("3-20")' id="3-20"><img id="3-20img" src=""></div>
+
+        <div onclick='playerClaim("4-1")' id="4-1"><img id="4-1img" src=""></div>
+        <div onclick='playerClaim("4-2")' id="4-2"><img id="4-2img" src=""></div>
+        <div onclick='playerClaim("4-3")' id="4-3"><img id="4-3img" src=""></div>
+        <div onclick='playerClaim("4-4")' id="4-4"><img id="4-4img" src=""></div>
+        <div onclick='playerClaim("4-5")' id="4-5"><img id="4-5img" src=""></div>
+        <div onclick='playerClaim("4-6")' id="4-6"><img id="4-6img" src=""></div>
+        <div onclick='playerClaim("4-7")' id="4-7"><img id="4-7img" src=""></div>
+        <div onclick='playerClaim("4-8")' id="4-8"><img id="4-8img" src=""></div>
+        <div onclick='playerClaim("4-9")' id="4-9"><img id="4-9img" src=""></div>
+        <div onclick='playerClaim("4-10")' id="4-10"><img id="4-10img" src=""></div>
+        <div onclick='playerClaim("4-11")' id="4-11"><img id="4-11img" src=""></div>
+        <div onclick='playerClaim("4-12")' id="4-12"><img id="4-12img" src=""></div>
+        <div onclick='playerClaim("4-13")' id="4-13"><img id="4-13img" src=""></div>
+        <div onclick='playerClaim("4-14")' id="4-14"><img id="4-14img" src=""></div>
+        <div onclick='playerClaim("4-15")' id="4-15"><img id="4-15img" src=""></div>
+        <div onclick='playerClaim("4-16")' id="4-16"><img id="4-16img" src=""></div>
+        <div onclick='playerClaim("4-17")' id="4-17"><img id="4-17img" src=""></div>
+        <div onclick='playerClaim("4-18")' id="4-18"><img id="4-18img" src=""></div>
+        <div onclick='playerClaim("4-19")' id="4-19"><img id="4-19img" src=""></div>
+        <div onclick='playerClaim("4-20")' id="4-20"><img id="4-20img" src=""></div>
+
+        <div onclick='playerClaim("5-1")' id="5-1"><img id="5-1img" src=""></div>
+        <div onclick='playerClaim("5-2")' id="5-2"><img id="5-2img" src=""></div>
+        <div onclick='playerClaim("5-3")' id="5-3"><img id="5-3img" src=""></div>
+        <div onclick='playerClaim("5-4")' id="5-4"><img id="5-4img" src=""></div>
+        <div onclick='playerClaim("5-5")' id="5-5"><img id="5-5img" src=""></div>
+        <div onclick='playerClaim("5-6")' id="5-6"><img id="5-6img" src=""></div>
+        <div onclick='playerClaim("5-7")' id="5-7"><img id="5-7img" src=""></div>
+        <div onclick='playerClaim("5-8")' id="5-8"><img id="5-8img" src=""></div>
+        <div onclick='playerClaim("5-9")' id="5-9"><img id="5-9img" src=""></div>
+        <div onclick='playerClaim("5-10")' id="5-10"><img id="5-10img" src=""></div>
+        <div onclick='playerClaim("5-11")' id="5-11"><img id="5-11img" src=""></div>
+        <div onclick='playerClaim("5-12")' id="5-12"><img id="5-12img" src=""></div>
+        <div onclick='playerClaim("5-13")' id="5-13"><img id="5-13img" src=""></div>
+        <div onclick='playerClaim("5-14")' id="5-14"><img id="5-14img" src=""></div>
+        <div onclick='playerClaim("5-15")' id="5-15"><img id="5-15img" src=""></div>
+        <div onclick='playerClaim("5-16")' id="5-16"><img id="5-16img" src=""></div>
+        <div onclick='playerClaim("5-17")' id="5-17"><img id="5-17img" src=""></div>
+        <div onclick='playerClaim("5-18")' id="5-18"><img id="5-18img" src=""></div>
+        <div onclick='playerClaim("5-19")' id="5-19"><img id="5-19img" src=""></div>
+        <div onclick='playerClaim("5-20")' id="5-20"><img id="5-20img" src=""></div>
+
+        <div onclick='playerClaim("6-1")' id="6-1"><img id="6-1img" src=""></div>
+        <div onclick='playerClaim("6-2")' id="6-2"><img id="6-2img" src=""></div>
+        <div onclick='playerClaim("6-3")' id="6-3"><img id="6-3img" src=""></div>
+        <div onclick='playerClaim("6-4")' id="6-4"><img id="6-4img" src=""></div>
+        <div onclick='playerClaim("6-5")' id="6-5"><img id="6-5img" src=""></div>
+        <div onclick='playerClaim("6-6")' id="6-6"><img id="6-6img" src=""></div>
+        <div onclick='playerClaim("6-7")' id="6-7"><img id="6-7img" src=""></div>
+        <div onclick='playerClaim("6-8")' id="6-8"><img id="6-8img" src=""></div>
+        <div onclick='playerClaim("6-9")' id="6-9"><img id="6-9img" src=""></div>
+        <div onclick='playerClaim("6-10")' id="6-10"><img id="6-10img" src=""></div>
+        <div onclick='playerClaim("6-11")' id="6-11"><img id="6-11img" src=""></div>
+        <div onclick='playerClaim("6-12")' id="6-12"><img id="6-12img" src=""></div>
+        <div onclick='playerClaim("6-13")' id="6-13"><img id="6-13img" src=""></div>
+        <div onclick='playerClaim("6-14")' id="6-14"><img id="6-14img" src=""></div>
+        <div onclick='playerClaim("6-15")' id="6-15"><img id="6-15img" src=""></div>
+        <div onclick='playerClaim("6-16")' id="6-16"><img id="6-16img" src=""></div>
+        <div onclick='playerClaim("6-17")' id="6-17"><img id="6-17img" src=""></div>
+        <div onclick='playerClaim("6-18")' id="6-18"><img id="6-18img" src=""></div>
+        <div onclick='playerClaim("6-19")' id="6-19"><img id="6-19img" src=""></div>
+        <div onclick='playerClaim("6-20")' id="6-20"><img id="6-20img" src=""></div>
+
+        <div onclick='playerClaim("7-1")' id="7-1"><img id="7-1img" src=""></div>
+        <div onclick='playerClaim("7-2")' id="7-2"><img id="7-2img" src=""></div>
+        <div onclick='playerClaim("7-3")' id="7-3"><img id="7-3img" src=""></div>
+        <div onclick='playerClaim("7-4")' id="7-4"><img id="7-4img" src=""></div>
+        <div onclick='playerClaim("7-5")' id="7-5"><img id="7-5img" src=""></div>
+        <div onclick='playerClaim("7-6")' id="7-6"><img id="7-6img" src=""></div>
+        <div onclick='playerClaim("7-7")' id="7-7"><img id="7-7img" src=""></div>
+        <div onclick='playerClaim("7-8")' id="7-8"><img id="7-8img" src=""></div>
+        <div onclick='playerClaim("7-9")' id="7-9"><img id="7-9img" src=""></div>
+        <div onclick='playerClaim("7-10")' id="7-10"><img id="7-10img" src=""></div>
+        <div onclick='playerClaim("7-11")' id="7-11"><img id="7-11img" src=""></div>
+        <div onclick='playerClaim("7-12")' id="7-12"><img id="7-12img" src=""></div>
+        <div onclick='playerClaim("7-13")' id="7-13"><img id="7-13img" src=""></div>
+        <div onclick='playerClaim("7-14")' id="7-14"><img id="7-14img" src=""></div>
+        <div onclick='playerClaim("7-15")' id="7-15"><img id="7-15img" src=""></div>
+        <div onclick='playerClaim("7-16")' id="7-16"><img id="7-16img" src=""></div>
+        <div onclick='playerClaim("7-17")' id="7-17"><img id="7-17img" src=""></div>
+        <div onclick='playerClaim("7-18")' id="7-18"><img id="7-18img" src=""></div>
+        <div onclick='playerClaim("7-19")' id="7-19"><img id="7-19img" src=""></div>
+        <div onclick='playerClaim("7-20")' id="7-20"><img id="7-20img" src=""></div>
+
+        <div onclick='playerClaim("8-1")' id="8-1"><img id="8-1img" src=""></div>
+        <div onclick='playerClaim("8-2")' id="8-2"><img id="8-2img" src=""></div>
+        <div onclick='playerClaim("8-3")' id="8-3"><img id="8-3img" src=""></div>
+        <div onclick='playerClaim("8-4")' id="8-4"><img id="8-4img" src=""></div>
+        <div onclick='playerClaim("8-5")' id="8-5"><img id="8-5img" src=""></div>
+        <div onclick='playerClaim("8-6")' id="8-6"><img id="8-6img" src=""></div>
+        <div onclick='playerClaim("8-7")' id="8-7"><img id="8-7img" src=""></div>
+        <div onclick='playerClaim("8-8")' id="8-8"><img id="8-8img" src=""></div>
+        <div onclick='playerClaim("8-9")' id="8-9"><img id="8-9img" src=""></div>
+        <div onclick='playerClaim("8-10")' id="8-10"><img id="8-10img" src=""></div>
+        <div onclick='playerClaim("8-11")' id="8-11"><img id="8-11img" src=""></div>
+        <div onclick='playerClaim("8-12")' id="8-12"><img id="8-12img" src=""></div>
+        <div onclick='playerClaim("8-13")' id="8-13"><img id="8-13img" src=""></div>
+        <div onclick='playerClaim("8-14")' id="8-14"><img id="8-14img" src=""></div>
+        <div onclick='playerClaim("8-15")' id="8-15"><img id="8-15img" src=""></div>
+        <div onclick='playerClaim("8-16")' id="8-16"><img id="8-16img" src=""></div>
+        <div onclick='playerClaim("8-17")' id="8-17"><img id="8-17img" src=""></div>
+        <div onclick='playerClaim("8-18")' id="8-18"><img id="8-18img" src=""></div>
+        <div onclick='playerClaim("8-19")' id="8-19"><img id="8-19img" src=""></div>
+        <div onclick='playerClaim("8-20")' id="8-20"><img id="8-20img" src=""></div>
+
+        <div onclick='playerClaim("9-1")' id="9-1"><img id="9-1img" src=""></div>
+        <div onclick='playerClaim("9-2")' id="9-2"><img id="9-2img" src=""></div>
+        <div onclick='playerClaim("9-3")' id="9-3"><img id="9-3img" src=""></div>
+        <div onclick='playerClaim("9-4")' id="9-4"><img id="9-4img" src=""></div>
+        <div onclick='playerClaim("9-5")' id="9-5"><img id="9-5img" src=""></div>
+        <div onclick='playerClaim("9-6")' id="9-6"><img id="9-6img" src=""></div>
+        <div onclick='playerClaim("9-7")' id="9-7"><img id="9-7img" src=""></div>
+        <div onclick='playerClaim("9-8")' id="9-8"><img id="9-8img" src=""></div>
+        <div onclick='playerClaim("9-9")' id="9-9"><img id="9-9img" src=""></div>
+        <div onclick='playerClaim("9-10")' id="9-10"><img id="9-10img" src=""></div>
+        <div onclick='playerClaim("9-11")' id="9-11"><img id="9-11img" src=""></div>
+        <div onclick='playerClaim("9-12")' id="9-12"><img id="9-12img" src=""></div>
+        <div onclick='playerClaim("9-13")' id="9-13"><img id="9-13img" src=""></div>
+        <div onclick='playerClaim("9-14")' id="9-14"><img id="9-14img" src=""></div>
+        <div onclick='playerClaim("9-15")' id="9-15"><img id="9-15img" src=""></div>
+        <div onclick='playerClaim("9-16")' id="9-16"><img id="9-16img" src=""></div>
+        <div onclick='playerClaim("9-17")' id="9-17"><img id="9-17img" src=""></div>
+        <div onclick='playerClaim("9-18")' id="9-18"><img id="9-18img" src=""></div>
+        <div onclick='playerClaim("9-19")' id="9-19"><img id="9-19img" src=""></div>
+        <div onclick='playerClaim("9-20")' id="9-20"><img id="9-20img" src=""></div>
+
+        <div onclick='playerClaim("10-1")' id="10-1"><img id="10-1img" src=""></div>
+        <div onclick='playerClaim("10-2")' id="10-2"><img id="10-2img" src=""></div>
+        <div onclick='playerClaim("10-3")' id="10-3"><img id="10-3img" src=""></div>
+        <div onclick='playerClaim("10-4")' id="10-4"><img id="10-4img" src=""></div>
+        <div onclick='playerClaim("10-5")' id="10-5"><img id="10-5img" src=""></div>
+        <div onclick='playerClaim("10-6")' id="10-6"><img id="10-6img" src=""></div>
+        <div onclick='playerClaim("10-7")' id="10-7"><img id="10-7img" src=""></div>
+        <div onclick='playerClaim("10-8")' id="10-8"><img id="10-8img" src=""></div>
+        <div onclick='playerClaim("10-9")' id="10-9"><img id="10-9img" src=""></div>
+        <div onclick='playerClaim("10-10")' id="10-10"><img id="10-10img" src=""></div>
+        <div onclick='playerClaim("10-11")' id="10-11"><img id="10-11img" src=""></div>
+        <div onclick='playerClaim("10-12")' id="10-12"><img id="10-12img" src=""></div>
+        <div onclick='playerClaim("10-13")' id="10-13"><img id="10-13img" src=""></div>
+        <div onclick='playerClaim("10-14")' id="10-14"><img id="10-14img" src=""></div>
+        <div onclick='playerClaim("10-15")' id="10-15"><img id="10-15img" src=""></div>
+        <div onclick='playerClaim("10-16")' id="10-16"><img id="10-16img" src=""></div>
+        <div onclick='playerClaim("10-17")' id="10-17"><img id="10-17img" src=""></div>
+        <div onclick='playerClaim("10-18")' id="10-18"><img id="10-18img" src=""></div>
+        <div onclick='playerClaim("10-19")' id="10-19"><img id="10-19img" src=""></div>
+        <div onclick='playerClaim("10-20")' id="10-20"><img id="10-20img" src=""></div>
+
+        <div onclick='playerClaim("11-1")' id="11-1"><img id="11-1img" src=""></div>
+        <div onclick='playerClaim("11-2")' id="11-2"><img id="11-2img" src=""></div>
+        <div onclick='playerClaim("11-3")' id="11-3"><img id="11-3img" src=""></div>
+        <div onclick='playerClaim("11-4")' id="11-4"><img id="11-4img" src=""></div>
+        <div onclick='playerClaim("11-5")' id="11-5"><img id="11-5img" src=""></div>
+        <div onclick='playerClaim("11-6")' id="11-6"><img id="11-6img" src=""></div>
+        <div onclick='playerClaim("11-7")' id="11-7"><img id="11-7img" src=""></div>
+        <div onclick='playerClaim("11-8")' id="11-8"><img id="11-8img" src=""></div>
+        <div onclick='playerClaim("11-9")' id="11-9"><img id="11-9img" src=""></div>
+        <div onclick='playerClaim("11-10")' id="11-10"><img id="11-10img" src=""></div>
+        <div onclick='playerClaim("11-11")' id="11-11"><img id="11-11img" src=""></div>
+        <div onclick='playerClaim("11-12")' id="11-12"><img id="11-12img" src=""></div>
+        <div onclick='playerClaim("11-13")' id="11-13"><img id="11-13img" src=""></div>
+        <div onclick='playerClaim("11-14")' id="11-14"><img id="11-14img" src=""></div>
+        <div onclick='playerClaim("11-15")' id="11-15"><img id="11-15img" src=""></div>
+        <div onclick='playerClaim("11-16")' id="11-16"><img id="11-16img" src=""></div>
+        <div onclick='playerClaim("11-17")' id="11-17"><img id="11-17img" src=""></div>
+        <div onclick='playerClaim("11-18")' id="11-18"><img id="11-18img" src=""></div>
+        <div onclick='playerClaim("11-19")' id="11-19"><img id="11-19img" src=""></div>
+        <div onclick='playerClaim("11-20")' id="11-20"><img id="11-20img" src=""></div>
+
+        <div onclick='playerClaim("12-1")' id="12-1"><img id="12-1img" src=""></div>
+        <div onclick='playerClaim("12-2")' id="12-2"><img id="12-2img" src=""></div>
+        <div onclick='playerClaim("12-3")' id="12-3"><img id="12-3img" src=""></div>
+        <div onclick='playerClaim("12-4")' id="12-4"><img id="12-4img" src=""></div>
+        <div onclick='playerClaim("12-5")' id="12-5"><img id="12-5img" src=""></div>
+        <div onclick='playerClaim("12-6")' id="12-6"><img id="12-6img" src=""></div>
+        <div onclick='playerClaim("12-7")' id="12-7"><img id="12-7img" src=""></div>
+        <div onclick='playerClaim("12-8")' id="12-8"><img id="12-8img" src=""></div>
+        <div onclick='playerClaim("12-9")' id="12-9"><img id="12-9img" src=""></div>
+        <div onclick='playerClaim("12-10")' id="12-10"><img id="12-10img" src=""></div>
+        <div onclick='playerClaim("12-11")' id="12-11"><img id="12-11img" src=""></div>
+        <div onclick='playerClaim("12-12")' id="12-12"><img id="12-12img" src=""></div>
+        <div onclick='playerClaim("12-13")' id="12-13"><img id="12-13img" src=""></div>
+        <div onclick='playerClaim("12-14")' id="12-14"><img id="12-14img" src=""></div>
+        <div onclick='playerClaim("12-15")' id="12-15"><img id="12-15img" src=""></div>
+        <div onclick='playerClaim("12-16")' id="12-16"><img id="12-16img" src=""></div>
+        <div onclick='playerClaim("12-17")' id="12-17"><img id="12-17img" src=""></div>
+        <div onclick='playerClaim("12-18")' id="12-18"><img id="12-18img" src=""></div>
+        <div onclick='playerClaim("12-19")' id="12-19"><img id="12-19img" src=""></div>
+        <div onclick='playerClaim("12-20")' id="12-20"><img id="12-20img" src=""></div>
+
+        <div onclick='playerClaim("13-1")' id="13-1"><img id="13-1img" src=""></div>
+        <div onclick='playerClaim("13-2")' id="13-2"><img id="13-2img" src=""></div>
+        <div onclick='playerClaim("13-3")' id="13-3"><img id="13-3img" src=""></div>
+        <div onclick='playerClaim("13-4")' id="13-4"><img id="13-4img" src=""></div>
+        <div onclick='playerClaim("13-5")' id="13-5"><img id="13-5img" src=""></div>
+        <div onclick='playerClaim("13-6")' id="13-6"><img id="13-6img" src=""></div>
+        <div onclick='playerClaim("13-7")' id="13-7"><img id="13-7img" src=""></div>
+        <div onclick='playerClaim("13-8")' id="13-8"><img id="13-8img" src=""></div>
+        <div onclick='playerClaim("13-9")' id="13-9"><img id="13-9img" src=""></div>
+        <div onclick='playerClaim("13-10")' id="13-10"><img id="13-10img" src=""></div>
+        <div onclick='playerClaim("13-11")' id="13-11"><img id="13-11img" src=""></div>
+        <div onclick='playerClaim("13-12")' id="13-12"><img id="13-12img" src=""></div>
+        <div onclick='playerClaim("13-13")' id="13-13"><img id="13-13img" src=""></div>
+        <div onclick='playerClaim("13-14")' id="13-14"><img id="13-14img" src=""></div>
+        <div onclick='playerClaim("13-15")' id="13-15"><img id="13-15img" src=""></div>
+        <div onclick='playerClaim("13-16")' id="13-16"><img id="13-16img" src=""></div>
+        <div onclick='playerClaim("13-17")' id="13-17"><img id="13-17img" src=""></div>
+        <div onclick='playerClaim("13-18")' id="13-18"><img id="13-18img" src=""></div>
+        <div onclick='playerClaim("13-19")' id="13-19"><img id="13-19img" src=""></div>
+        <div onclick='playerClaim("13-20")' id="13-20"><img id="13-20img" src=""></div>
+
+        <div onclick='playerClaim("14-1")' id="14-1"><img id="14-1img" src=""></div>
+        <div onclick='playerClaim("14-2")' id="14-2"><img id="14-2img" src=""></div>
+        <div onclick='playerClaim("14-3")' id="14-3"><img id="14-3img" src=""></div>
+        <div onclick='playerClaim("14-4")' id="14-4"><img id="14-4img" src=""></div>
+        <div onclick='playerClaim("14-5")' id="14-5"><img id="14-5img" src=""></div>
+        <div onclick='playerClaim("14-6")' id="14-6"><img id="14-6img" src=""></div>
+        <div onclick='playerClaim("14-7")' id="14-7"><img id="14-7img" src=""></div>
+        <div onclick='playerClaim("14-8")' id="14-8"><img id="14-8img" src=""></div>
+        <div onclick='playerClaim("14-9")' id="14-9"><img id="14-9img" src=""></div>
+        <div onclick='playerClaim("14-10")' id="14-10"><img id="14-10img" src=""></div>
+        <div onclick='playerClaim("14-11")' id="14-11"><img id="14-11img" src=""></div>
+        <div onclick='playerClaim("14-12")' id="14-12"><img id="14-12img" src=""></div>
+        <div onclick='playerClaim("14-13")' id="14-13"><img id="14-13img" src=""></div>
+        <div onclick='playerClaim("14-14")' id="14-14"><img id="14-14img" src=""></div>
+        <div onclick='playerClaim("14-15")' id="14-15"><img id="14-15img" src=""></div>
+        <div onclick='playerClaim("14-16")' id="14-16"><img id="14-16img" src=""></div>
+        <div onclick='playerClaim("14-17")' id="14-17"><img id="14-17img" src=""></div>
+        <div onclick='playerClaim("14-18")' id="14-18"><img id="14-18img" src=""></div>
+        <div onclick='playerClaim("14-19")' id="14-19"><img id="14-19img" src=""></div>
+        <div onclick='playerClaim("14-20")' id="14-20"><img id="14-20img" src=""></div>
+
+        <div onclick='playerClaim("15-1")' id="15-1"><img id="15-1img" src=""></div>
+        <div onclick='playerClaim("15-2")' id="15-2"><img id="15-2img" src=""></div>
+        <div onclick='playerClaim("15-3")' id="15-3"><img id="15-3img" src=""></div>
+        <div onclick='playerClaim("15-4")' id="15-4"><img id="15-4img" src=""></div>
+        <div onclick='playerClaim("15-5")' id="15-5"><img id="15-5img" src=""></div>
+        <div onclick='playerClaim("15-6")' id="15-6"><img id="15-6img" src=""></div>
+        <div onclick='playerClaim("15-7")' id="15-7"><img id="15-7img" src=""></div>
+        <div onclick='playerClaim("15-8")' id="15-8"><img id="15-8img" src=""></div>
+        <div onclick='playerClaim("15-9")' id="15-9"><img id="15-9img" src=""></div>
+        <div onclick='playerClaim("15-10")' id="15-10"><img id="15-10img" src=""></div>
+        <div onclick='playerClaim("15-11")' id="15-11"><img id="15-11img" src=""></div>
+        <div onclick='playerClaim("15-12")' id="15-12"><img id="15-12img" src=""></div>
+        <div onclick='playerClaim("15-13")' id="15-13"><img id="15-13img" src=""></div>
+        <div onclick='playerClaim("15-14")' id="15-14"><img id="15-14img" src=""></div>
+        <div onclick='playerClaim("15-15")' id="15-15"><img id="15-15img" src=""></div>
+        <div onclick='playerClaim("15-16")' id="15-16"><img id="15-16img" src=""></div>
+        <div onclick='playerClaim("15-17")' id="15-17"><img id="15-17img" src=""></div>
+        <div onclick='playerClaim("15-18")' id="15-18"><img id="15-18img" src=""></div>
+        <div onclick='playerClaim("15-19")' id="15-19"><img id="15-19img" src=""></div>
+        <div onclick='playerClaim("15-20")' id="15-20"><img id="15-20img" src=""></div>
+
+        <div onclick='playerClaim("16-1")' id="16-1"><img id="16-1img" src=""></div>
+        <div onclick='playerClaim("16-2")' id="16-2"><img id="16-2img" src=""></div>
+        <div onclick='playerClaim("16-3")' id="16-3"><img id="16-3img" src=""></div>
+        <div onclick='playerClaim("16-4")' id="16-4"><img id="16-4img" src=""></div>
+        <div onclick='playerClaim("16-5")' id="16-5"><img id="16-5img" src=""></div>
+        <div onclick='playerClaim("16-6")' id="16-6"><img id="16-6img" src=""></div>
+        <div onclick='playerClaim("16-7")' id="16-7"><img id="16-7img" src=""></div>
+        <div onclick='playerClaim("16-8")' id="16-8"><img id="16-8img" src=""></div>
+        <div onclick='playerClaim("16-9")' id="16-9"><img id="16-9img" src=""></div>
+        <div onclick='playerClaim("16-10")' id="16-10"><img id="16-10img" src=""></div>
+        <div onclick='playerClaim("16-11")' id="16-11"><img id="16-11img" src=""></div>
+        <div onclick='playerClaim("16-12")' id="16-12"><img id="16-12img" src=""></div>
+        <div onclick='playerClaim("16-13")' id="16-13"><img id="16-13img" src=""></div>
+        <div onclick='playerClaim("16-14")' id="16-14"><img id="16-14img" src=""></div>
+        <div onclick='playerClaim("16-15")' id="16-15"><img id="16-15img" src=""></div>
+        <div onclick='playerClaim("16-16")' id="16-16"><img id="16-16img" src=""></div>
+        <div onclick='playerClaim("16-17")' id="16-17"><img id="16-17img" src=""></div>
+        <div onclick='playerClaim("16-18")' id="16-18"><img id="16-18img" src=""></div>
+        <div onclick='playerClaim("16-19")' id="16-19"><img id="16-19img" src=""></div>
+        <div onclick='playerClaim("16-20")' id="16-20"><img id="16-20img" src=""></div>
+
+        <div onclick='playerClaim("17-1")' id="17-1"><img id="17-1img" src=""></div>
+        <div onclick='playerClaim("17-2")' id="17-2"><img id="17-2img" src=""></div>
+        <div onclick='playerClaim("17-3")' id="17-3"><img id="17-3img" src=""></div>
+        <div onclick='playerClaim("17-4")' id="17-4"><img id="17-4img" src=""></div>
+        <div onclick='playerClaim("17-5")' id="17-5"><img id="17-5img" src=""></div>
+        <div onclick='playerClaim("17-6")' id="17-6"><img id="17-6img" src=""></div>
+        <div onclick='playerClaim("17-7")' id="17-7"><img id="17-7img" src=""></div>
+        <div onclick='playerClaim("17-8")' id="17-8"><img id="17-8img" src=""></div>
+        <div onclick='playerClaim("17-9")' id="17-9"><img id="17-9img" src=""></div>
+        <div onclick='playerClaim("17-10")' id="17-10"><img id="17-10img" src=""></div>
+        <div onclick='playerClaim("17-11")' id="17-11"><img id="17-11img" src=""></div>
+        <div onclick='playerClaim("17-12")' id="17-12"><img id="17-12img" src=""></div>
+        <div onclick='playerClaim("17-13")' id="17-13"><img id="17-13img" src=""></div>
+        <div onclick='playerClaim("17-14")' id="17-14"><img id="17-14img" src=""></div>
+        <div onclick='playerClaim("17-15")' id="17-15"><img id="17-15img" src=""></div>
+        <div onclick='playerClaim("17-16")' id="17-16"><img id="17-16img" src=""></div>
+        <div onclick='playerClaim("17-17")' id="17-17"><img id="17-17img" src=""></div>
+        <div onclick='playerClaim("17-18")' id="17-18"><img id="17-18img" src=""></div>
+        <div onclick='playerClaim("17-19")' id="17-19"><img id="17-19img" src=""></div>
+        <div onclick='playerClaim("17-20")' id="17-20"><img id="17-20img" src=""></div>
+
+        <div onclick='playerClaim("18-1")' id="18-1"><img id="18-1img" src=""></div>
+        <div onclick='playerClaim("18-2")' id="18-2"><img id="18-2img" src=""></div>
+        <div onclick='playerClaim("18-3")' id="18-3"><img id="18-3img" src=""></div>
+        <div onclick='playerClaim("18-4")' id="18-4"><img id="18-4img" src=""></div>
+        <div onclick='playerClaim("18-5")' id="18-5"><img id="18-5img" src=""></div>
+        <div onclick='playerClaim("18-6")' id="18-6"><img id="18-6img" src=""></div>
+        <div onclick='playerClaim("18-7")' id="18-7"><img id="18-7img" src=""></div>
+        <div onclick='playerClaim("18-8")' id="18-8"><img id="18-8img" src=""></div>
+        <div onclick='playerClaim("18-9")' id="18-9"><img id="18-9img" src=""></div>
+        <div onclick='playerClaim("18-10")' id="18-10"><img id="18-10img" src=""></div>
+        <div onclick='playerClaim("18-11")' id="18-11"><img id="18-11img" src=""></div>
+        <div onclick='playerClaim("18-12")' id="18-12"><img id="18-12img" src=""></div>
+        <div onclick='playerClaim("18-13")' id="18-13"><img id="18-13img" src=""></div>
+        <div onclick='playerClaim("18-14")' id="18-14"><img id="18-14img" src=""></div>
+        <div onclick='playerClaim("18-15")' id="18-15"><img id="18-15img" src=""></div>
+        <div onclick='playerClaim("18-16")' id="18-16"><img id="18-16img" src=""></div>
+        <div onclick='playerClaim("18-17")' id="18-17"><img id="18-17img" src=""></div>
+        <div onclick='playerClaim("18-18")' id="18-18"><img id="18-18img" src=""></div>
+        <div onclick='playerClaim("18-19")' id="18-19"><img id="18-19img" src=""></div>
+        <div onclick='playerClaim("18-20")' id="18-20"><img id="18-20img" src=""></div>
+
+        <div onclick='playerClaim("19-1")' id="19-1"><img id="19-1img" src=""></div>
+        <div onclick='playerClaim("19-2")' id="19-2"><img id="19-2img" src=""></div>
+        <div onclick='playerClaim("19-3")' id="19-3"><img id="19-3img" src=""></div>
+        <div onclick='playerClaim("19-4")' id="19-4"><img id="19-4img" src=""></div>
+        <div onclick='playerClaim("19-5")' id="19-5"><img id="19-5img" src=""></div>
+        <div onclick='playerClaim("19-6")' id="19-6"><img id="19-6img" src=""></div>
+        <div onclick='playerClaim("19-7")' id="19-7"><img id="19-7img" src=""></div>
+        <div onclick='playerClaim("19-8")' id="19-8"><img id="19-8img" src=""></div>
+        <div onclick='playerClaim("19-9")' id="19-9"><img id="19-9img" src=""></div>
+        <div onclick='playerClaim("19-10")' id="19-10"><img id="19-10img" src=""></div>
+        <div onclick='playerClaim("19-11")' id="19-11"><img id="19-11img" src=""></div>
+        <div onclick='playerClaim("19-12")' id="19-12"><img id="19-12img" src=""></div>
+        <div onclick='playerClaim("19-13")' id="19-13"><img id="19-13img" src=""></div>
+        <div onclick='playerClaim("19-14")' id="19-14"><img id="19-14img" src=""></div>
+        <div onclick='playerClaim("19-15")' id="19-15"><img id="19-15img" src=""></div>
+        <div onclick='playerClaim("19-16")' id="19-16"><img id="19-16img" src=""></div>
+        <div onclick='playerClaim("19-17")' id="19-17"><img id="19-17img" src=""></div>
+        <div onclick='playerClaim("19-18")' id="19-18"><img id="19-18img" src=""></div>
+        <div onclick='playerClaim("19-19")' id="19-19"><img id="19-19img" src=""></div>
+        <div onclick='playerClaim("19-20")' id="19-20"><img id="19-20img" src=""></div>
+
+        <div onclick='playerClaim("20-1")' id="20-1"><img id="20-1img" src=""></div>
+        <div onclick='playerClaim("20-2")' id="20-2"><img id="20-2img" src=""></div>
+        <div onclick='playerClaim("20-3")' id="20-3"><img id="20-3img" src=""></div>
+        <div onclick='playerClaim("20-4")' id="20-4"><img id="20-4img" src=""></div>
+        <div onclick='playerClaim("20-5")' id="20-5"><img id="20-5img" src=""></div>
+        <div onclick='playerClaim("20-6")' id="20-6"><img id="20-6img" src=""></div>
+        <div onclick='playerClaim("20-7")' id="20-7"><img id="20-7img" src=""></div>
+        <div onclick='playerClaim("20-8")' id="20-8"><img id="20-8img" src=""></div>
+        <div onclick='playerClaim("20-9")' id="20-9"><img id="20-9img" src=""></div>
+        <div onclick='playerClaim("20-10")' id="20-10"><img id="20-10img" src=""></div>
+        <div onclick='playerClaim("20-11")' id="20-11"><img id="20-11img" src=""></div>
+        <div onclick='playerClaim("20-12")' id="20-12"><img id="20-12img" src=""></div>
+        <div onclick='playerClaim("20-13")' id="20-13"><img id="20-13img" src=""></div>
+        <div onclick='playerClaim("20-14")' id="20-14"><img id="20-14img" src=""></div>
+        <div onclick='playerClaim("20-15")' id="20-15"><img id="20-15img" src=""></div>
+        <div onclick='playerClaim("20-16")' id="20-16"><img id="20-16img" src=""></div>
+        <div onclick='playerClaim("20-17")' id="20-17"><img id="20-17img" src=""></div>
+        <div onclick='playerClaim("20-18")' id="20-18"><img id="20-18img" src=""></div>
+        <div onclick='playerClaim("20-19")' id="20-19"><img id="20-19img" src=""></div>
+        <div onclick='playerClaim("20-20")' id="20-20"><img id="20-20img" src=""></div>
+
+
+        <footer>
+            <h1 id="goldCount">Gold: </h1>
+            <button onclick="endTurn()" id="endTurn">End Turn</button>
+            <button onclick="farmButton()" id="buyFarm">Buy Farm</button>
+            <button onclick="swordButton()" id="buySword">Buy Solider</button>
+            <button onclick="bowButton()" id="buyBow">Buy Archer</button>
+        </footer>
+    </content>
+    <script src="script.js"></script>
+</body>
+
+</html>

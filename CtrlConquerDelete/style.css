@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+
+#startingScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #33333355;
+    text-align: center;
+    position: absolute;
+    padding: 10px;
+    width: 70vw;
+    height: 80vh;
+    left: 50%;
+    top: 50vh;
+    transform: translateX(-50%) 
+    translateY(-50%);
+}
+h1 {
+    font-size: 4vw;
+}
+#one {color: aquamarine;}
+#two {color: rgb(255, 128, 0);}
+#three {color: rgb(255, 0, 0);}
+h6 {
+    font-size: 2vw;
+    background-color: #f0f8ffcd;
+}
+#startButton {
+    background-color: blanchedalmond;
+    width: 30%;
+    min-height: 10%;
+    font-size: 2vw;
+}
+#winScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #33333355;
+    text-align: center;
+    position: absolute;
+    padding: 10px;
+    width: 70vw;
+    height: 80vh;
+    left: 50%;
+    top: 50vh;
+    transform: translateX(-50%) 
+    translateY(-50%);
+    visibility: hidden;
+}
+#winScreen h6 {
+    font-size: 30px;
+}
+#winScreen h1 {
+    font-size: 50px;
+}
+content {
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+body {
+    height: 100%;
+    width: 100vw;
+}
+
+div {
+    width: 4.90vw;
+    border: 0.1vw solid black;
+    aspect-ratio: 1;
+    background-color: rgb(250, 235, 215);
+}
+img{
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    background-color:burlywood;
+    height: 10vh;
+    width: 100%;
+    bottom: 0;
+}
+footer button{
+    font-size: 2vw;
+    border-radius: 10px;
+    padding: 5px;
+}
+#endTurn {
+    background-color: lightgreen;
+}
+#buySword, #buyBow, #buyFarm{
+    background-color: lightcoral;
+}

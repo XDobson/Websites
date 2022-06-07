@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Redressed&family=ZCOOL+QingKe+HuangYou&display=swap');
+
+/* 
+Following lines are the imported font families:
+
+(Normal, robotic kinda body text)
+font-family: 'Inconsolata', monospace;
+
+(Old Text kinda header text)
+font-family: 'Redressed', cursive;
+
+(Bolder robotic kinda header text)
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+ */
+
+* {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+}
+
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, #020024 0%, #00001d 34%, #05bbb2 100%);
+    
+    position: relative;
+}
+
+/* Navigation bar at top of viewport */
+#navbar {
+    display: flex;
+    background-color: #0d0080;
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: 100;
+}
+
+/* Navbar Buttons and their functionality*/
+.navbutt {
+    border-bottom: 3px #686868 solid;
+    border-left: 3px #686868 solid;
+    border-radius: 7px;
+    background-color: #4D0080;
+    font-family: 'Redressed', cursive;
+    color: white;
+    padding: 5px;
+    font-size: 32px;
+    z-index: 15;
+}
+a {
+    text-decoration: none;
+}
+.navbutt:active {
+    transition-duration: 0.1s;
+    border-right: 1px #414040 solid;
+    border-top: 1px #414040 solid;
+    border-left: 1px #414040 solid;
+    border-bottom: 1px #414040 solid;
+   
+    background-color: #39005f;
+}
+#links:focus {
+    border-right: 1px #414040 solid;
+    border-top: 1px #414040 solid;
+    border-left: 1px #414040 solid;
+    border-bottom: 1px #414040 solid;
+   
+    background-color: #e0e7b0;
+}
+#linkpage {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    top: 15%;
+    left: 40%;
+    background-color: #008ea7;
+    border: 5px solid #0bb2c898;
+    border-radius: 10px;
+    padding: 5px;
+    width: 20%;
+    height: auto;
+    z-index: 400;
+    visibility: hidden;
+}
+#linkpage i {
+    font-size: 60px;
+    z-index: 500;
+    color: #00001d;
+    transition: font-size 0.75s;
+}
+#linkpage i:hover {
+    font-size: 70px;
+}
+#links:focus + #linkpage {
+    visibility: visible;
+}
+#linkpage:hover {
+    visibility: visible;
+}
+#leftnav,#rightnav {
+    display: flex;
+    justify-content: space-between;
+    width: 30vw;
+}
+
+/* #break{ */
+    /* a surprise tool that will help us later (smaller screens) */
+    /* visibility: hidden;
+} */
+
+/* Words in the navbar is a picture */
+#logo {
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Picture at background, top of webpage */
+.cover {
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+    margin-top: 10vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Text on cover */
+#coverText {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 45vh;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    color: #F2FABE;
+}
+#coverText h1 {
+    font-size: 60px;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+#coverText h4 {
+    font-size: 30px;
+    line-height: 2;
+    font-family: 'Inconsolata', monospace;
+}
+
+/* Everything under the cover picture */
+#page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* All Examples */
+#products {
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+/* Example Products*/
+#showoff {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+}
+#showoff:nth-of-type(2) {
+    justify-content: center;
+}
+.showcase {
+    width: 25vw;
+}
+#page #showoff:nth-child(1) img {
+    border: rgb(0, 128, 6) solid 5px;
+    transition: 0.75s;
+}
+#page #showoff:nth-child(1) img:hover {
+    width: 27vw;
+}
+#page #showoff:nth-child(2) i {
+    font-size: 15vw;
+    margin: 30px;
+    text-align: center;
+    color: white;
+}
+#page #showoff:nth-child(3) img {
+    border: rgb(187,5,14) solid 5px;
+    transition: 0.75s;
+}
+#page #showoff:nth-child(3) img:hover {
+    width: 27vw;
+}
+#textbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(105,187,5);
+    background: radial-gradient(circle, rgba(105,187,5,1) 0%, rgba(203,255,144,1) 100%);
+    border-radius: 10px;
+    height: auto;
+    width: 30vw;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    font-family: 'Inconsolata', monospace;
+}
+#showoff:nth-of-type(2) #textbox {
+    background: rgb(170,0,186);
+    background: radial-gradient(circle, rgba(170,0,186,1) 0%, rgba(87,5,187,1) 100%);
+    
+}
+#showoff:nth-of-type(3) #textbox {
+    background: rgb(187,5,14);
+    background: radial-gradient(circle, #bb050e 0%, #BB0569 100%);
+}
+
+
+#about {
+    width: 88%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #E8E8FF;
+    border: #E8E8FF solid 2px;
+    border-radius: 20px;
+    padding: 20px 0;
+    margin: 100px 0 40px 0;
+}
+#aboutpic {
+    width: 25vw;
+    margin: 30px;
+}
+#aboutbox {
+    display: flex;
+    align-items: center;
+    /* background-color: #E8FFF3; */
+    height: auto;
+    width: 38vw;
+    padding: 15px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    line-height: 1.5;
+}
+span {
+    font-weight:bolder;
+}
+
+/* Green Button */
+#cbtn {
+    border-bottom: 3px rgb(114, 114, 114) solid;
+    border-left: 3px rgb(114, 114, 114) solid;
+    border-radius: 7px;
+    background-color: #caf9ff;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 60px;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+#cbtn:active {
+    border-right: 1px rgb(63, 63, 63) solid;
+    border-top: 1px rgb(63, 63, 63) solid;
+    border-left: 1px rgb(63, 63, 63) solid;
+    border-bottom: 1px rgb(63, 63, 63) solid;
+    
+    background-color: #11a4be;
+}
+
+
+/* All Media Queries are a WORK IN PROGRESS */
+/* Screens Wider than 2000px (4k usually) */
+@media (min-width:2000px) {
+    #formlogo {
+        width: 600px;
+    }
+    #textbox {
+        font-size: 80px;
+        height: 425px;
+    }
+    #coverText h1 {
+        font-size: 120px;
+    }
+    #coverText h4 {
+        font-size: 60px;
+    }
+    h1.navbutt, #links {
+        font-size: 64px;
+    }
+    #linkpage i {
+        font-size: 120px;
+    }
+}
+@media (min-width:2495px) {
+    #aboutbox {
+        font-size: 80px;
+    }
+}
+
+/* Landscape on phones, height < 420px */
+@media (max-height:420px) {
+    #navbar {
+        height: 20vh;
+    }
+}
+
+/* Landscape on smaller phones, width < 796 */
+@media (max-width:796px) {
+    #coverText {
+        top: 20vh;
+    }
+    #coverText h1 {
+        font-size: 30px;
+    }
+    #coverText h4 {
+        font-size: 15px;
+    }
+    #aboutbox {
+        font-size: 30px;
+    }
+    #textbox {
+        font-size: 20px ;
+    }
+    #linkpage {
+        width: 30%;
+    }
+}
+
+/* Portrait fixes */
+@media (max-width:700px) {
+    #navbar {
+        padding-bottom: 14vh;
+    }
+    #aboutbox {
+        font-size: 16px;
+    }
+    #linkpage i {
+        font-size: 40px;
+    }
+}
+@media (max-width:466px) {
+    #aboutbox {
+        font-size: 10px;
+    }
+    .navbutt {
+        font-size: 24px;
+    }
+    #textbox {
+        font-size: 14px;
+    }
+    #linkpage i {
+        font-size: 30px;
+    }
+}
+@media (max-width:400px) {
+    #coverText h1{
+        font-size: 16px;
+    }
+}

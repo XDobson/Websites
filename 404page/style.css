@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Grape+Nuts&family=Inconsolata&family=Lobster&family=Ms+Madi&family=Pacifico&family=Square+Peg&display=swap');
+
+/* 
+font-family: 'Anton', sans-serif;
+font-family: 'Grape Nuts', cursive;
+font-family: 'Inconsolata', monospace;
+font-family: 'Lobster', cursive;
+font-family: 'Ms Madi', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Square Peg', cursive;
+*/
+
+h1 {
+    font-size: 6vh;
+    font-family: 'Anton', sans-serif;
+}
+
+h2 {
+    font-size: 5vh;
+    font-family: 'Grape Nuts', cursive;
+}
+
+h3 {
+    font-size: 4vh;
+    font-family: 'Lobster', cursive;
+}
+
+h4 {
+    font-size: 3vh;
+    font-family: 'Pacifico', cursive;
+
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation-name: fade;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition-property: all;
+}
+
+@keyframes fade {
+    0% {
+        background-color: red;
+    }
+    10% {
+        background-color: orangered;
+    }
+    20% {
+        background-color: orange;
+    }
+    30% {
+        background-color: yellow;
+    }
+    40% {
+        background-color: yellowgreen;
+    }
+    50% {
+        background-color: green;
+    }
+    60% {
+        background-color: blue;
+    }
+    70% {
+        background-color: rgb(46, 0, 130);
+    }
+    80% {
+        background-color: indigo;
+    }
+    90% {
+        background-color: violet;
+    }
+    100% {
+        background-color: red;
+    }
+}

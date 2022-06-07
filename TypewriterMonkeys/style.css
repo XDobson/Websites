@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: rgb(80, 80, 80);
+}
+
+monkeyBin {
+    display: flex;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#monkey1label,#monkey2label,#monkey3label,#monkey4label {
+    word-wrap: break-word;
+    font-size: medium;
+    letter-spacing: 2px;
+    padding: 5px;
+}
+
+h2 {
+    word-wrap: normal;
+    padding-top: 20px;
+}
+
+h3 {
+    word-wrap: break-word;
+    letter-spacing: 2px;
+    padding-top: 3vh;
+}
+
+#monkeyHome {
+    width: 100%;
+    height: 50%;
+    max-height: 50vh;
+    background-color: cornsilk;
+}
+
+#resultsSection {
+    width: 50%;
+    height: 50vh;
+    max-height: 50vh;
+    background-color: rgb(220, 254, 255);
+    overflow-y: scroll;
+    scroll-snap-type: mandatory;
+}
+
+#slurmp {
+    display: flex;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+i {
+    font-size: 10vh;
+    background-color: rgb(155, 47, 243);
+    padding: 5px;
+    border: solid purple 3px;
+    margin: 1vw;
+    border-radius: 10px;
+}
+
+#speed {
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 3vh;
+    padding-bottom: 10vh;
+}
+
+#story {
+    background-color: rgb(197, 255, 143);
+    height: 30vh;
+    max-height: 30vh;
+    overflow-y: scroll;
+    padding: 10px;
+}
